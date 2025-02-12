@@ -5,6 +5,8 @@ class tryExceptManager:
 # initialize it
 tryExcept = tryExceptManager()
 
+##tryExcept = type('tryExcept', (object,), {'__enter__': lambda self: None, '__exit__': lambda *args: True})()
+
 # if there is an error, the variable wont exist
 with tryExcept: testvar = notAFunction()
 print('testvar' in globals()) # False
